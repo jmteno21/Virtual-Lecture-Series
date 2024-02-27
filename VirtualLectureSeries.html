@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Lecture Series</title>
+    <style>
+        body {
+                font-family:Hiragino,sans-serif;
+                text-align:left;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        img {
+            max-width: 75%;
+            height: auto;
+            margin: 20px auto; /* Center the image horizontally and add margin */
+            max-height: 1000px; /* Set a maximum height for the image */
+            display: block; /* Ensure the image is displayed as a block element */
+        }
+ a {
+            color: black; /* Set the color of the links to black */
+            text-decoration: none;
+        }
+        }
+    </style>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Adriana David Monasterio Ortiz</h1>
+    <h1>The Architecture of Food</h1>
+    <img src="Unknown.jpeg" alt="Image">
+    <br>
+    <a href="https://https://wustl.zoom.us/j/92724424901">Zoom Link</a>
+    <a href="https://doma.mx">Adriana David Monasterio Ortiz</a>
+ <div id="qrcode"></div>
+   
+    <script>
+        var links = "https://wustl.zoom.us/j/92724424901"|https://doma.mx"; // Two links separated by a pipe (|)
+        
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "file:///Applications/Brackets.app/Contents/samples/root/Getting%20Started/Untitled-2/VirtualLectureSeries.html",
+            width: 256,
+            height: 256,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        });
+    </script>
+</body>
+
+
+
+
