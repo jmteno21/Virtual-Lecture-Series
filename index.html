@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Lecture Series</title>
     <style>
         body {
-                font-family:Hiragino,sans-serif;
-                text-align:left;
+            font-family: 'Hiragino Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             font-size: 24px;
             color: #333;
         }
         img {
-            max-width: 75%;
+            max-width: 100%;
             height: auto;
-            margin: 20px auto; /* Center the image horizontally and add margin */
-            max-height: 1000px; /* Set a maximum height for the image */
-            display: block; /* Ensure the image is displayed as a block element */
+            margin: 20px 0;
         }
- a {
-            color: black; /* Set the color of the links to black */
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
             text-decoration: none;
-        }
+            border-radius: 5px;
+            font-size: 18px;
         }
     </style>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 </head>
 <body>
-    <h1>Adriana David Monasterio Ortiz</h1>
-    <h1>The Architecture of Food</h1>
-    <img src="Unknown.jpeg" alt="Image">
-    <br>
-    <a href="https://wustl.zoom.us/j/92724424901">Zoom Link</a>
-    <a href="https://doma.mx">Adriana David Monasterio Ortiz</a>
- <div id="qrcode"></div>
-   
+    <div class="container">
+        <h1>Celeste Abba</h1>
+        <h1>Forensic Architecture</h1>
+        <img src="Unknown.jpeg" alt="Image">
+        <br>
+        <a href="https://wustl.zoom.us/j/92724424901" class="button">Zoom Link</a>
+        <a href="https://doma.mx" class="button">Adriana David Monasterio Ortiz</a>
+        <div id="qrcode"></div>
+    </div>
     <script>
-        var links = "https://wustl.zoom.us/j/92724424901"|"https://doma.mx"; // Two links separated by a pipe (|)
+        var links = "https://wustl.zoom.us/j/92724424901|https://doma.mx"; // Two links separated by a pipe (|)
         
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: links,
@@ -48,6 +66,7 @@
         });
     </script>
 </body>
+</html>
 
 
 
