@@ -1,6 +1,3 @@
-Certainly! Here's the modified code with both individuals side by side on the website:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +37,10 @@ Certainly! Here's the modified code with both individuals side by side on the we
             height: auto;
             margin: 20px 0;
         }
+        .image-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
         a.button {
             display: inline-block;
             padding: 10px 20px;
@@ -58,7 +59,9 @@ Certainly! Here's the modified code with both individuals side by side on the we
         <div>
             <h1>Carolina Acevedo</h1>
             <h1>ETH Zurich</h1>
-            <img src="1.1.a.1_garden-collaborative-axon_180421-2.jpg" alt="Image">
+            <div class="image-container">
+                <img src="1.1.a.1_garden-collaborative-axon_180421-2.jpg" alt="Image">
+            </div>
             <br>
             <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
             <a href="https://gali-izard.arch.ethz.ch/the-garden-of-the-xxi-century" class="button">Garden Of The XXI Century</a>
@@ -67,7 +70,9 @@ Certainly! Here's the modified code with both individuals side by side on the we
         <div>
             <h1>Danica Liongson</h1>
             <h1>Merritt Chase</h1>
-            <img src="DL_BWImage.jpg" alt="Image">
+            <div class="image-container">
+                <img src="DL_BWImage.jpg" alt="Image">
+            </div>
             <br>
             <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
             <a href="http://www.danicaliongson.com" class="button">Danica Liongson</a>
@@ -99,9 +104,4 @@ Certainly! Here's the modified code with both individuals side by side on the we
     </script>
 </body>
 </html>
-```
-
-This code will display both individuals side by side on the website. Each person's information and QR code will be contained within separate divs that are flexibly arranged.
-
-
 
