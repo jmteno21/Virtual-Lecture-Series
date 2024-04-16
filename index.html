@@ -1,3 +1,6 @@
+Certainly! Here's the modified code with both individuals side by side on the website:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +23,13 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; /* Added */
+            justify-content: space-between; /* Added */
+            flex-wrap: wrap; /* Added */
+        }
+        .container > div {
+            flex-basis: 48%; /* Adjusted */
+            margin-bottom: 40px; /* Added */
         }
         h1 {
             font-size: 24px;
@@ -45,32 +55,41 @@
 </head>
 <body>
     <div class="container">
-        <h1>Carolina Acevedo</h1>
-        <h1>ETH Zurich</h1>
-        <img src="1.1.a.1_garden-collaborative-axon_180421-2.jpg" alt="Image">
-        <br>
-        <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
-        <a href="https://gali-izard.arch.ethz.ch/the-garden-of-the-xxi-century" class="button">Garden Of The XXI Century</a>
-        <div id="qrcode"></div>
+        <div>
+            <h1>Carolina Acevedo</h1>
+            <h1>ETH Zurich</h1>
+            <img src="1.1.a.1_garden-collaborative-axon_180421-2.jpg" alt="Image">
+            <br>
+            <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
+            <a href="https://gali-izard.arch.ethz.ch/the-garden-of-the-xxi-century" class="button">Garden Of The XXI Century</a>
+            <div id="qrcode1"></div>
+        </div>
+        <div>
+            <h1>Danica Liongson</h1>
+            <h1>Merritt Chase</h1>
+            <img src="DL_BWImage.jpg" alt="Image">
+            <br>
+            <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
+            <a href="http://www.danicaliongson.com" class="button">Danica Liongson</a>
+            <div id="qrcode2"></div>
+        </div>
     </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> <!-- Added -->
     <script>
-        var links = "https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09|https://gali-izard.arch.ethz.ch/the-garden-of-the-xxi-century"; // Two links separated by a pipe (|)
-    
-    <div class="container">
-        <h1>Danica Liongson </h1>
-        <h1>Merritt Chase</h1>
-        <img src="DL_BWImage.jpg" alt="Image">
-        <br>
-        <a href="https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09" class="button">Zoom Link</a>
-        <a href="http://www.danicaliongson.com" class="button">Danica Liongson</a>
-        <div id="qrcode"></div>
-    </div>
-    <script>
-        var links = "https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09|http://www.danicaliongson.com"; // Two links separated by a pipe (|)
-\
-        
-        var qrcode = new QRCode(document.getElementById("qrcode"), {
-            text: links,
+        var links1 = "https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09|https://gali-izard.arch.ethz.ch/the-garden-of-the-xxi-century"; // Two links separated by a pipe (|)
+        var links2 = "https://wustl.zoom.us/j/95884954956?pwd=aUl5czVKSGhDaER5ckVNVTFTVmgxUT09|http://www.danicaliongson.com"; // Two links separated by a pipe (|)
+
+        var qrcode1 = new QRCode(document.getElementById("qrcode1"), {
+            text: links1,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        var qrcode2 = new QRCode(document.getElementById("qrcode2"), {
+            text: links2,
             width: 128,
             height: 128,
             colorDark: "#000000",
@@ -80,7 +99,9 @@
     </script>
 </body>
 </html>
+```
 
+This code will display both individuals side by side on the website. Each person's information and QR code will be contained within separate divs that are flexibly arranged.
 
 
 
